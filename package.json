@@ -1,0 +1,26 @@
+{
+  "name": "ebla",
+  "version": "1.0.0",
+  "description": "a node api for hexed heroes",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/galenmolk/Ebla.git"
+  },
+  "author": "Galen Molk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/galenmolk/Ebla/issues"
+  },
+  "homepage": "https://github.com/galenmolk/Ebla#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
