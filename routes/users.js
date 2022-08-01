@@ -69,7 +69,7 @@ const userRoutes = (app, fs) => {
     app.delete('/users/:id', (req, res) => {
         readFile(data => {
             const userId = req.params['id'];
-            delete data[userId]['name'];
+            delete data[userId];
             
             writeFile(JSON.stringify(data, null, 2), () => {
                 res.status(200).send(`users id:${userId} removed`);
