@@ -1,5 +1,5 @@
 // Load up our route for users.
-const userRoutes = require('./users');
+const abilityRoutes = require('./abilities');
 
 const appRouter = (app, fs) => {
    // We've added in a default route here that handles
@@ -9,7 +9,7 @@ const appRouter = (app, fs) => {
    });
    
    // Run our user route module here to complete the wire up.
-    userRoutes(app, fs);
+    abilityRoutes(app, fs);
 };
 
 module.exports = appRouter;
