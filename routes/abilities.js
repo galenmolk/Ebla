@@ -43,8 +43,11 @@ const abilityRoutes = (app, fs) => {
     app.post('/abilities', (req, res) => {
         readFile(data => {
             
-            const ability = JSON.parse(req.body);
-            const id = ability['Id'];
+            console.log('Ebla POST began.')
+            console.log(req.body);
+            console.log(JSON.parse(req.body));
+            
+            const id = req.body['Id'];
             data[id] = req.body;
 
             writeFile(JSON.stringify(data, null, 2), () => {

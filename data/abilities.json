@@ -1,12 +1,20 @@
 {
-  "1": 
-    {
-      "Name": "Punch",
-      "CooldownTurns": 0,
-      "IsPassive": false,
-      "IsInterrupt": false,
-      "Description": "I fight u",
-      "Path": "ROOT/BigFolder",
-      "Id": "1"
-    }
+  "1": {
+    "Name": "Punch",
+    "CooldownTurns": 0,
+    "IsPassive": false,
+    "IsInterrupt": false,
+    "Description": "I fight u",
+    "Path": "ROOT/BigFolder",
+    "Id": "1"
+  },
+  "2": {
+    "Name": "Slam",
+    "CooldownTurns": "2",
+    "IsPassive": "false",
+    "IsInterrupt": "true",
+    "Description": "Fuck you",
+    "Path": "ROOT/BigFolder",
+    "Id": "2"
+  }
 }
