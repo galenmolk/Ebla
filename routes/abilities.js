@@ -45,7 +45,6 @@ const abilityRoutes = (app, fs) => {
             
             console.log('Ebla POST began.')
             console.log(req.body);
-            console.log(JSON.parse(req.body));
             
             const id = req.body['Id'];
             data[id] = req.body;
