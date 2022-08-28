@@ -50,13 +50,13 @@ const galleryRoutes = (app, fs) => {
             data[gallery].push(req.body);
             
             writeFile(JSON.stringify(data, null, 2), () => {
-                res.status(200).send('New Ability added');
+                res.status(200).send('New Gallery element added');
             });
         }, true);
     });
 
     // DELETE
-    app.delete('/abilities/:id', (req, res) => {
+    app.delete('/gallery/:id', (req, res) => {
         readFile(data => {
             const id = req.params['id'];
 
