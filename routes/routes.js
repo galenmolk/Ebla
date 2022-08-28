@@ -1,5 +1,5 @@
 // Load up our route for users.
-const abilityRoutes = require('./abilities');
+const galleryRoutes = require('./gallery');
 
 const appRouter = (app, fs) => {
    // We've added in a default route here that handles
@@ -9,7 +9,7 @@ const appRouter = (app, fs) => {
    });
    
    // Run our user route module here to complete the wire up.
-    abilityRoutes(app, fs);
+    galleryRoutes(app, fs);
 };
 
 module.exports = appRouter;
