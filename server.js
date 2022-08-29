@@ -2,7 +2,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-import cors from "cors";
+const cors = require('cors');
 
 // Create an instance of express to serve our end points.
 const app = express();
