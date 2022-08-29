@@ -2,24 +2,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
+import cors from "cors";
+
 // Create an instance of express to serve our end points.
 const app = express();
 
-app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "*")
-    res.header(
-        "Access-Control-Allow-Headers",
-        "Origin, X-Requested, Content-Type, Accept Authorization"
-    )
-    if (req.method === "OPTIONS") {
-        res.header(
-            "Access-Control-Allow-Methods",
-            "POST, PUT, PATCH, GET, DELETE"
-        )
-        return res.status(200).json({})
-    }
-    next()
-});
+app.use(cors());
 
 // We'll load up Node's build-in file system helper library here.
 // (We'll be using this later to serve our JSON files).
