@@ -48,12 +48,13 @@ const galleryRoutes = (app, fs) => {
             console.log('Ebla POST began.')
             console.log(req.body);
             
-            req.body['Id'] = cuid();
+            let id = cuid();
+            req.body['Id'] = id;
             
             data[gallery].push(req.body);
             
             writeFile(JSON.stringify(data, null, 2), () => {
-                res.status(200).send('New Gallery element added');
+                res.status(200).send(id);
             });
         }, true);
     });
