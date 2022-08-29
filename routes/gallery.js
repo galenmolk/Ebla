@@ -2,6 +2,7 @@ const galleryRoutes = (app, fs) => {
     // Variables
     const dataPath = './data/gallery.json';
     const gallery = 'gallery';
+    const cuid = require('cuid');
     
     const readFile = (
         callback,
@@ -46,7 +47,9 @@ const galleryRoutes = (app, fs) => {
 
             console.log('Ebla POST began.')
             console.log(req.body);
-
+            
+            req.body['Id'] = cuid();
+            
             data[gallery].push(req.body);
             
             writeFile(JSON.stringify(data, null, 2), () => {
