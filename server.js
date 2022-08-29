@@ -1,7 +1,7 @@
 // Load up the express framework and body-parser helper.
 const express = require('express');
 const bodyParser = require('body-parser');
-
+require('newrelic');
 const cors = require('cors');
 
 // Create an instance of express to serve our end points.
